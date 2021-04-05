@@ -1,22 +1,16 @@
 {
   "tasks": [
     {
-			"id": 1,
-			"text": "Make Money",
-			"date": "This week",
-			"reminder": false
-		},
-		{
-			"id": 2,
-			"text": "Make Food",
-			"date": "At least once a week",
-			"reminder": true
-		},
-		{
-			"id": 3,
-			"text": "Make Cool Web Apps",
-			"date": "All lifetime",
-			"reminder": false
-		}
+      "id": 1,
+      "text": "Make Money",
+      "date": "This week",
+      "reminder": false
+    },
+    {
+      "id": 3,
+      "text": "Make Cool Web Apps",
+      "date": "All lifetime",
+      "reminder": false
+    }
   ]
 }
