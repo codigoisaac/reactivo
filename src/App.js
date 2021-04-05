@@ -43,10 +43,13 @@ function App() {
 		setTasks([...tasks, newTask]);
 	}
 
+	const [showForm, setShowForm] = useState(false);
+
   return (
     <div className="container">
-      <Header />
-			<AddTask onAdd={addTask} />
+      <Header onAddClick={() => setShowForm(!showForm)}
+			showForm={showForm}/>
+			{showForm && <AddTask onAdd={addTask} />}
       {tasks.length > 0 
         ? <Tasks tasks={tasks} onDelete={deleteTask} 
         onToggle={toggleReminder} />
@@ -63,3 +66,4 @@ export default App;
 // display tasks in order of date
 // style
 // change reminder toggling
+// add + and x icons to add button
