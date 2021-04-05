@@ -21,7 +21,7 @@
     {
       "text": "Make some games too, why not?",
       "date": "",
-      "reminder": false,
+      "reminder": true,
       "id": 5
     }
   ]
