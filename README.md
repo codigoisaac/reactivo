@@ -8,4 +8,6 @@ Nele, podemos adicionar e deletar dados, em forma de tarefas, com título, texto
 
 Também tem um botão onde podemos clicar para abrir/fechar o formulário para adicionar uma nova terefa.
 
+O app usa o [json-server]{https://github.com/typicode/json-server} para simular um back-end.
+
 Para me contatar por favor envie um email para codigoisaac@pm.me
