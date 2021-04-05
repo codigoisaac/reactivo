@@ -1,0 +1,22 @@
+{
+  "tasks": [
+    {
+			"id": 1,
+			"text": "Make Money",
+			"date": "This week",
+			"reminder": false
+		},
+		{
+			"id": 1,
+			"text": "Make Food",
+			"date": "At least once a week",
+			"reminder": true
+		},
+		{
+			"id": 1,
+			"text": "Make Cool Web Apps",
+			"date": "All lifetime",
+			"reminder": false
+		}
+  ]
+}
