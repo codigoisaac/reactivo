@@ -11,6 +11,18 @@
       "text": "Make Cool Web Apps",
       "date": "All lifetime",
       "reminder": false
+    },
+    {
+      "text": "Make Awesome Mobile Apps",
+      "date": "In my 20's",
+      "reminder": true,
+      "id": 4
+    },
+    {
+      "text": "Make some games too, why not?",
+      "date": "",
+      "reminder": false,
+      "id": 5
     }
   ]
 }
