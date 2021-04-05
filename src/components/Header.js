@@ -1,10 +1,15 @@
 import Button from "./Button";
+import { useLocation } from "react-router-dom";
 
 const Header = ({ onAddClick, showForm }) => {
+  const location = useLocation();
+
   return (
     <header className="header">
       <h1>Reactivo</h1>
-      <Button text={showForm ? "Close" : "Add"} onClick={onAddClick} />
+      {location.pathname === "/" && (
+        <Button text={showForm ? "Close" : "Add"} onClick={onAddClick} />
+      )}
     </header>
   );
 };
