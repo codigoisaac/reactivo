@@ -69,18 +69,25 @@ function App() {
     <Router>
       <div className="container">
         <Header onAddClick={() => setShowForm(!showForm)} showForm={showForm} />
-        
-				<Route path='/' exact render={(props) => (
-					<>
-						{showForm && <AddTask onAdd={addTask} />}
-						{tasks.length > 0 
-							? (<Tasks
-								tasks={tasks}
-								onDelete={deleteTask}
-								onToggle={toggleReminder} />) 
-							: ("No tasks to show.")}
-					</>
-				)} />
+
+        <Route
+          path="/"
+          exact
+          render={(props) => (
+            <>
+              {showForm && <AddTask onAdd={addTask} />}
+              {tasks.length > 0 ? (
+                <Tasks
+                  tasks={tasks}
+                  onDelete={deleteTask}
+                  onToggle={toggleReminder}
+                />
+              ) : (
+                "No tasks to show."
+              )}
+            </>
+          )}
+        />
         <Route path="/about" component={About} />
         <Footer />
       </div>
