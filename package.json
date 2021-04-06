@@ -1,4 +1,5 @@
 {
+  "homepage": "https://isaacmuniz.github.io/reactivo",
   "name": "reactivo",
   "version": "0.1.0",
   "private": true,
@@ -15,13 +16,13 @@
     "web-vitals": "^1.1.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "json-server --watch db.json --port 5000",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "server": "json-server --watch db.json --port 5000"
   },
   "eslintConfig": {
     "extends": [
@@ -43,6 +44,5 @@
   },
   "devDependencies": {
     "gh-pages": "^3.1.0"
-  },
-  "homepage": "https://isaacmuniz.github.io/reactivo"
+  }
 }
