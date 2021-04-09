@@ -54,26 +54,31 @@ body {
   width: 100%;
 }
 
+/** task */
 .task {
   background: #f4f4f4;
   margin: 5px;
   padding: 10px 20px;
 }
-
 .taskHeader {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
 .task.important {
   border-left: 5px solid green;
 }
-
 .task h3 {
   width: 100%;
   text-align: left;
-  padding: 0 1rem;
+  padding: 0 1rem 0 0;
+}
+.task input {
+  margin-right: 0.4rem;
+  cursor: cell;
+}
+.task p {
+  padding-top: 0.6rem;
 }
 
 .add-form {
