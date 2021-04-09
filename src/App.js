@@ -81,4 +81,3 @@ export default App;
 // put 'go back' in place of 'about' button when in about page
 // change task.date to task.note
 // change task.text to task.title
-// make important checkbox the full task height like if it was a border... or not
