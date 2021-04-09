@@ -76,7 +76,7 @@ body {
   align-items: center;
   margin-top: 0.3rem;
 }
-.task.important {
+.task.priority {
   border-left: 5px solid rosybrown;
 }
 .task input {

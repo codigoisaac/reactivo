@@ -1,9 +1,9 @@
 import { useState } from "react";
 
 const FormAddTask = ({ onAdd }) => {
-  const [title, settitle] = useState(""),
-    [note, setnote] = useState(""),
-    [important, setimportant] = useState(false);
+  const [title, setTitle] = useState(""),
+    [note, setNote] = useState(""),
+    [priority, setPriority] = useState(false);
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -17,11 +17,11 @@ const FormAddTask = ({ onAdd }) => {
     const chance = require("chance").Chance();
     const id = chance.guid();
 
-    onAdd({ title, note, important, id });
+    onAdd({ title, note, priority, id });
 
-    settitle("");
-    setnote("");
-    setimportant(false);
+    setTitle("");
+    setNote("");
+    setPriority(false);
   };
 
   return (
@@ -32,7 +32,7 @@ const FormAddTask = ({ onAdd }) => {
           type="title"
           placeholder="Add Task"
           value={title}
-          onChange={(e) => settitle(e.target.value)}
+          onChange={(e) => setTitle(e.target.value)}
         />
       </div>
 
@@ -42,16 +42,16 @@ const FormAddTask = ({ onAdd }) => {
           type="title"
           placeholder="Add note & Time"
           value={note}
-          onChange={(e) => setnote(e.target.value)}
+          onChange={(e) => setNote(e.target.value)}
         />
       </div>
 
       <div className="form-control form-control-check">
         <input
           type="checkbox"
-          value={important}
-          checked={important}
-          onChange={(e) => setimportant(e.currentTarget.checked)}
+          value={priority}
+          checked={priority}
+          onChange={(e) => setPriority(e.currentTarget.checked)}
         />
         <label>Prioridade</label>
       </div>

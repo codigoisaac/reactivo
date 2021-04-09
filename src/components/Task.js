@@ -2,15 +2,15 @@ import { FaTimes } from "react-icons/fa";
 
 const Task = ({ task, onDelete, onToggle }) => {
   return (
-    <div className={`task ${task.important ? "important" : ""}`}>
+    <div className={`task ${task.priority ? "priority" : ""}`}>
       <div className="taskHeader">
         <h3>{task.title}</h3>
         <div className="taskControls">
           <input
             onClick={() => onToggle(task.id)}
             type="checkbox"
-            id="importantCheck"
-            checked={task.important}
+            id="priorityCheck"
+            checked={task.priority}
           />
           <FaTimes
             className="deleteIcon"

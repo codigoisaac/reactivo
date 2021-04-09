@@ -24,11 +24,11 @@ function App() {
     save();
   };
 
-  //* toggle important
-  const toggleimportant = (id) => {
+  //* toggle priority
+  const togglePriority = (id) => {
     setTasks(
       tasks.map((task) =>
-        task.id === id ? { ...task, important: !task.important } : task
+        task.id === id ? { ...task, priority: !task.priority } : task
       )
     );
     save();
@@ -57,7 +57,7 @@ function App() {
                 <Tasks
                   tasks={tasks}
                   onDelete={deleteTask}
-                  onToggle={toggleimportant}
+                  onToggle={togglePriority}
                 />
               ) : (
                 "No tasks to show."
@@ -77,5 +77,6 @@ export default App;
 // todos:
 // style reactivo piece
 // style background
+// change 'priority' to 'priority'
 // display 'about' button only when not in about page
 // put 'go back' in place of 'about' button when in about page
