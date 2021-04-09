@@ -47,13 +47,13 @@ const FormAddTask = ({ onAdd }) => {
       </div>
 
       <div className="form-control form-control-check">
-        <label htmlFor="">Set important</label>
         <input
           type="checkbox"
           value={important}
           checked={important}
           onChange={(e) => setimportant(e.currentTarget.checked)}
         />
+        <label>Prioridade</label>
       </div>
 
       <input type="submit" value="Save Task" className="btn btn-block" />
