@@ -4,7 +4,7 @@ const Task = ({ task, onDelete, onToggle }) => {
   return (
     <div className={`task ${task.important ? "important" : ""}`}>
       <div className='taskHeader'>
-        <h3>{task.text}</h3>
+        <h3>{task.title}</h3>
         <div className="taskControls">
           <input onClick={() => onToggle(task.id)} type="checkbox" id="importantCheck" />
           <FaTimes className='deleteIcon'
@@ -13,7 +13,7 @@ const Task = ({ task, onDelete, onToggle }) => {
             />
         </div>
       </div>
-      {task.date && <p>{task.date}</p>}
+      {task.note && <p>{task.note}</p>}
     </div>
   );
 };

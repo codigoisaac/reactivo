@@ -75,9 +75,7 @@ function App() {
 export default App;
 
 // todos:
-// style
-// change important toggling
+// style reactivo piece
+// style background
 // display 'about' button only when not in about page
 // put 'go back' in place of 'about' button when in about page
-// change task.date to task.note
-// change task.text to task.title

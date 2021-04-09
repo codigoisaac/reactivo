@@ -1,14 +1,14 @@
 import { useState } from "react";
 
 const FormAddTask = ({ onAdd }) => {
-  const [text, setText] = useState(""),
-    [date, setDate] = useState(""),
+  const [title, settitle] = useState(""),
+    [note, setnote] = useState(""),
     [important, setimportant] = useState(false);
 
   const onSubmit = (e) => {
     e.preventDefault();
 
-    if (!text) {
+    if (!title) {
       alert("Por favor insira o título da tarefa.");
       return;
     }
@@ -17,32 +17,32 @@ const FormAddTask = ({ onAdd }) => {
     const chance = require("chance").Chance();
     const id = chance.guid();
 
-    onAdd({ text, date, important, id });
+    onAdd({ title, note, important, id });
 
-    setText("");
-    setDate("");
+    settitle("");
+    setnote("");
     setimportant(false);
   };
 
   return (
     <form className="add-form" onSubmit={onSubmit}>
       <div className="form-control">
-        <label htmlFor="">Task</label>
+        <label htmlFor="">Título</label>
         <input
-          type="text"
+          type="title"
           placeholder="Add Task"
-          value={text}
-          onChange={(e) => setText(e.target.value)}
+          value={title}
+          onChange={(e) => settitle(e.target.value)}
         />
       </div>
 
       <div className="form-control">
-        <label htmlFor="">Date & Time</label>
+        <label htmlFor="">Notas</label>
         <input
-          type="text"
-          placeholder="Add Date & Time"
-          value={date}
-          onChange={(e) => setDate(e.target.value)}
+          type="title"
+          placeholder="Add note & Time"
+          value={note}
+          onChange={(e) => setnote(e.target.value)}
         />
       </div>
 
