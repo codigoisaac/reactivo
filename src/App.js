@@ -75,8 +75,6 @@ function App() {
 export default App;
 
 // todos:
-// style reactivo piece
 // style background
-// change 'priority' to 'priority'
 // display 'about' button only when not in about page
 // put 'go back' in place of 'about' button when in about page
