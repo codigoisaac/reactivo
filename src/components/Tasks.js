@@ -9,6 +9,7 @@ const Tasks = ({ tasks, onDelete, onToggle }) => {
           task={task}
           onDelete={onDelete}
           onToggle={onToggle}
+          priority={task.important}
         />
       ))}
     </>

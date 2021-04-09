@@ -8,6 +8,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  --react-color: #4499b0;
 }
 
 .container {
@@ -15,7 +16,7 @@ body {
   margin: 30px auto;
   overflow: auto;
   min-height: 300px;
-  border: 1px solid steelblue;
+  border: 1px solid var(--react-color);
   padding: 30px;
   border-radius: 5px;
 }
@@ -28,9 +29,9 @@ body {
 }
 
 .btn {
+  color: white;
   display: inline-block;
-  background: #000;
-  color: #fff;
+  background: black;
   border: none;
   padding: 10px 20px;
   margin: 5px;
@@ -57,7 +58,7 @@ body {
 /** task */
 .task {
   background: #f4f4f4;
-  margin: 5px;
+  margin: 5px 0;
   padding: 10px 20px;
 }
 .taskHeader {
@@ -120,4 +121,8 @@ body {
 footer {
   margin-top: 30px;
   text-align: center;
+}
+
+a {
+  color: rosybrown;
 }
