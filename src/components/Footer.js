@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 function Footer() {
   return (
     <footer>
-      <p>Copyright &copy; 2021</p>
-      <Link to="/about">About</Link>
+      <Link to={useLocation().pathname === "/" ? "/about" : "/"}>
+        {useLocation().pathname === "/" ? "Sobre" : "Home"}
+      </Link>
     </footer>
   );
 }

@@ -30,7 +30,7 @@ const FormAddTask = ({ onAdd }) => {
         <label htmlFor="">Título</label>
         <input
           type="title"
-          placeholder="Add Task"
+          placeholder="Adicione o título da tarefa"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
@@ -40,7 +40,7 @@ const FormAddTask = ({ onAdd }) => {
         <label htmlFor="">Notas</label>
         <input
           type="title"
-          placeholder="Add note & Time"
+          placeholder="Adicione notas para a tarefa"
           value={note}
           onChange={(e) => setNote(e.target.value)}
         />
@@ -56,7 +56,7 @@ const FormAddTask = ({ onAdd }) => {
         <label>Prioridade</label>
       </div>
 
-      <input type="submit" value="Save Task" className="btn btn-block" />
+      <input type="submit" value="Salvar" className="btn btn-block" />
     </form>
   );
 };

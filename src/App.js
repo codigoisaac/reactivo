@@ -73,8 +73,3 @@ function App() {
 }
 
 export default App;
-
-// todos:
-// style background
-// display 'about' button only when not in about page
-// put 'go back' in place of 'about' button when in about page

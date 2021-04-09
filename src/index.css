@@ -8,7 +8,6 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  --react-color: #4499b0;
 }
 
 .container {
@@ -18,14 +17,14 @@ body {
   min-height: 300px;
   padding: 30px;
   border-radius: 5px;
-  box-shadow: 0 0 4px var(--react-color);
+  box-shadow: 0 0 4px #4499b0;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .btn {
@@ -34,7 +33,6 @@ body {
   background: black;
   border: none;
   padding: 10px 20px;
-  margin: 5px;
   border-radius: 5px;
   cursor: pointer;
   text-decoration: none;
@@ -57,7 +55,8 @@ body {
 
 /** task */
 .task {
-  background: #f4f4f4;
+  background-color: #f4f4f4;
+  border-radius: 7px;
   margin: 5px 0;
   padding: 10px 20px;
 }
@@ -121,6 +120,10 @@ body {
 footer {
   margin-top: 30px;
   text-align: center;
+}
+
+#about p {
+  margin: 1rem 0;
 }
 
 a {
