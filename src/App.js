@@ -79,4 +79,6 @@ export default App;
 // change important toggling
 // display 'about' button only when not in about page
 // put 'go back' in place of 'about' button when in about page
-// change 'reminder' to 'important'
+// change task.date to task.note
+// change task.text to task.title
+// make important checkbox the full task height like if it was a border... or not
