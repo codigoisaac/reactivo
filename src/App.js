@@ -1,70 +1,47 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Tasks from "./components/Tasks";
-import AddTask from "./components/AddTask";
+import FormAddTask from "./components/FormAddTask";
 import Footer from "./components/Footer";
 import About from "./components/About";
 
 function App() {
-  const [tasks, setTasks] = useState([]);
+  const savedTasks = JSON.parse(localStorage.getItem("reactivo-tasks")) || [];
 
-  const deleteTask = async (id) => {
-    await fetch(`http://localhost:5000/tasks/${id}`, { method: "DELETE" });
-    setTasks(tasks.filter((task) => task.id !== id));
+  const [tasks, setTasks] = useState(savedTasks);
+  save();
+
+  //* add
+  const addTask = (task) => {
+    setTasks([...tasks, task]);
+    save();
   };
 
-  const toggleReminder = async (id) => {
-    const taskToToggle = await fetchTask(id);
-    const updTask = { ...taskToToggle, reminder: !taskToToggle.reminder };
+  //* delete
+  const deleteTask = (id) => {
+    setTasks(tasks.filter((task) => task.id !== id));
+    save();
+  };
 
-    const res = await fetch(`http://localhost:5000/tasks/${id}`, {
-      method: "PUT",
-      headers: { "Content-type": "application/json" },
-      body: JSON.stringify(updTask),
-    });
-
-    const data = await res.json();
-
+  //* toggle reminder
+  const toggleReminder = (id) => {
     setTasks(
       tasks.map((task) =>
-        task.id === id ? { ...task, reminder: data.reminder } : task
+        task.id === id ? { ...task, reminder: !task.reminder } : task
       )
     );
+    save();
   };
 
-  const addTask = async (task) => {
-    const res = await fetch(`http://localhost:5000/tasks`, {
-      method: "POST",
-      headers: { "Content-type": "application/json" },
-      body: JSON.stringify(task),
-    });
-    const data = await res.json();
-    setTasks([...tasks, data]);
-  };
+  //* save
+  function save() {
+    localStorage.setItem("reactivo-tasks", JSON.stringify(tasks));
+  }
 
   const [showForm, setShowForm] = useState(false);
 
-  useEffect(() => {
-    const getTasks = async () => {
-      const tasksFromServer = await fetchTasks();
-      setTasks(tasksFromServer);
-    };
-    getTasks();
-  }, []);
-
-  const fetchTasks = async () => {
-    const res = await fetch("http://localhost:5000/tasks");
-    const data = await res.json();
-    return data;
-  };
-
-  const fetchTask = async (id) => {
-    const res = await fetch(`http://localhost:5000/tasks/${id}`);
-    const data = await res.json();
-    return data;
-  };
-
+  //* render
   return (
     <Router>
       <div className="container">
@@ -73,9 +50,9 @@ function App() {
         <Route
           path="/"
           exact
-          render={(props) => (
+          render={() => (
             <>
-              {showForm && <AddTask onAdd={addTask} />}
+              {showForm && <FormAddTask onAdd={addTask} />}
               {tasks.length > 0 ? (
                 <Tasks
                   tasks={tasks}
@@ -98,8 +75,8 @@ function App() {
 export default App;
 
 // todos:
-// generate id with chance.js
-// display tasks in order of date
 // style
 // change reminder toggling
-// add + and x icons to add button
+// display 'about' button only when not in about page
+// put 'go back' button in place of 'about' button when in about page
+// change 'reminder' to 'important'

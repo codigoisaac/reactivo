@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const AddTask = ({ onAdd }) => {
+const FormAddTask = ({ onAdd }) => {
   const [text, setText] = useState(""),
     [date, setDate] = useState(""),
     [reminder, setReminder] = useState(false);
@@ -13,7 +13,11 @@ const AddTask = ({ onAdd }) => {
       return;
     }
 
-    onAdd({ text, date, reminder });
+    // chance.js
+    const chance = require("chance").Chance();
+    const id = chance.guid();
+
+    onAdd({ text, date, reminder, id });
 
     setText("");
     setDate("");
@@ -57,4 +61,4 @@ const AddTask = ({ onAdd }) => {
   );
 };
 
-export default AddTask;
+export default FormAddTask;
