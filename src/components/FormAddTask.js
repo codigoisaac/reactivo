@@ -3,7 +3,7 @@ import { useState } from "react";
 const FormAddTask = ({ onAdd }) => {
   const [text, setText] = useState(""),
     [date, setDate] = useState(""),
-    [reminder, setReminder] = useState(false);
+    [important, setimportant] = useState(false);
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -17,11 +17,11 @@ const FormAddTask = ({ onAdd }) => {
     const chance = require("chance").Chance();
     const id = chance.guid();
 
-    onAdd({ text, date, reminder, id });
+    onAdd({ text, date, important, id });
 
     setText("");
     setDate("");
-    setReminder(false);
+    setimportant(false);
   };
 
   return (
@@ -47,12 +47,12 @@ const FormAddTask = ({ onAdd }) => {
       </div>
 
       <div className="form-control form-control-check">
-        <label htmlFor="">Set Reminder</label>
+        <label htmlFor="">Set important</label>
         <input
           type="checkbox"
-          value={reminder}
-          checked={reminder}
-          onChange={(e) => setReminder(e.currentTarget.checked)}
+          value={important}
+          checked={important}
+          onChange={(e) => setimportant(e.currentTarget.checked)}
         />
       </div>
 

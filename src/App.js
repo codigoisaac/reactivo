@@ -24,11 +24,11 @@ function App() {
     save();
   };
 
-  //* toggle reminder
-  const toggleReminder = (id) => {
+  //* toggle important
+  const toggleimportant = (id) => {
     setTasks(
       tasks.map((task) =>
-        task.id === id ? { ...task, reminder: !task.reminder } : task
+        task.id === id ? { ...task, important: !task.important } : task
       )
     );
     save();
@@ -57,7 +57,7 @@ function App() {
                 <Tasks
                   tasks={tasks}
                   onDelete={deleteTask}
-                  onToggle={toggleReminder}
+                  onToggle={toggleimportant}
                 />
               ) : (
                 "No tasks to show."
@@ -76,7 +76,7 @@ export default App;
 
 // todos:
 // style
-// change reminder toggling
+// change important toggling
 // display 'about' button only when not in about page
-// put 'go back' button in place of 'about' button when in about page
+// put 'go back' in place of 'about' button when in about page
 // change 'reminder' to 'important'
