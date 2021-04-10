@@ -8,6 +8,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: lightgray;
 }
 
 .container {
@@ -70,7 +71,7 @@ body {
 
 /** task */
 .task {
-  background-color: #f4f4f4;
+  background-color: gainsboro;
   border-radius: 7px;
   margin: 5px 0;
   padding: 10px 20px;
@@ -143,4 +144,5 @@ footer {
 
 a {
   color: rosybrown;
+  font-weight: bold;
 }
