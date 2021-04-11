@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: lightgray;
+}
+
+.container {
+  max-width: 600px;
+  margin: 30px auto;
+  overflow: auto;
+  min-height: 300px;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 4px #4499b0;
+}
+@media (max-width: 610px) {
+  .container {
+    margin: 30px 10px;
+  }
+}
+@media (max-width: 500px) {
+  .container {
+    padding: 30px 20px;
+  }
+}
+@media (max-width: 350px) {
+  .container {
+    padding: 30px 10px;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.btn {
+  color: white;
+  display: inline-block;
+  background: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+/** task */
+.task {
+  background-color: gainsboro;
+  border-radius: 7px;
+  margin: 5px 0;
+  padding: 10px 20px;
+}
+.taskHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.task h3 {
+  width: 100%;
+  text-align: left;
+  padding: 0 1rem 0 0;
+}
+.taskControls {
+  display: flex;
+  align-items: center;
+  margin-top: 0.3rem;
+}
+.task.priority {
+  border-left: 5px solid rosybrown;
+}
+.task input {
+  margin-right: 0.4rem;
+  cursor: cell;
+}
+.task p {
+  padding-top: 0.6rem;
+}
+
+.add-form {
+  margin-bottom: 40px;
+}
+
+.form-control {
+  margin: 20px 0;
+}
+
+.form-control label {
+  display: block;
+}
+
+.form-control input {
+  width: 100%;
+  height: 40px;
+  margin: 5px;
+  padding: 3px 7px;
+  font-size: 17px;
+}
+
+.form-control-check {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.form-control-check input {
+  height: 20px;
+  width: auto;
+}
+
+footer {
+  margin-top: 30px;
+  text-align: center;
+}
+
+#about p {
+  margin: 1rem 0;
+}
+
+a {
+  color: rosybrown;
+  font-weight: bold;
+}
