@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Tasks from "./components/Tasks";
 import FormAddTask from "./components/FormAddTask";
@@ -43,7 +43,7 @@ function App() {
 
   //* render
   return (
-    <Router>
+    <BrowserRouter basename="/reactivo">
       <div className="container">
         <Header onAddClick={() => setShowForm(!showForm)} showForm={showForm} />
 
@@ -68,7 +68,7 @@ function App() {
         <Route path="/about" component={About} />
         <Footer />
       </div>
-    </Router>
+    </BrowserRouter>
   );
 }
 
