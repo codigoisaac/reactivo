@@ -60,7 +60,7 @@ function App() {
                   onToggle={togglePriority}
                 />
               ) : (
-                "No tasks to show."
+                "Use o botão acima para criar atrefas."
               )}
             </>
           )}
