@@ -2,13 +2,16 @@ function About() {
   return (
     <div id="about">
       <p>
-        Esse pequeno e simples app não faz muita coisa, e nem mesmo é realmente
-        útil (eu acho), mas para mim ele foi muito útil e fez muito!
+        Reactivo é um simples app para anotar tarefas (e qualquer outra coisa que você quiser) que ficam salvas no armazenamento local do seu navogador.
       </p>
       <p>
-        Com a criação do Reactivo eu aprendi a usar o framework React, o que é
-        um grande marco na minha jornada de estudo em desenvolvimento de
-        software e eu espero que em minha carreira.
+        Esse app apesar de ser bem simples é um marco na minha jornada de estudos em desenvolvimento para a web, porque é o primeiro app que eu construo usando um framework de front end, nesse caso o framework React (daí o nome Reactivo).
+      </p>
+      <p>
+        Eu aprendi bastante construindo e publicando o Reactivo, e com certeza esse conhecimento ajudará muito na criação de meus próximos aplicativos e websites.
+      </p>
+      <p>
+        Você pode me contatar para quaisquer assuntos.
       </p>
       <h4>Valeu por usar o Reactivo :)</h4>
       <p>
