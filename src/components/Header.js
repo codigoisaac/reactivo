@@ -6,7 +6,7 @@ const Header = ({ onAddClick, showForm }) => {
     <header className="header">
       <h1>Reactivo</h1>
       {useLocation().pathname === "/" && (
-        <Button text={showForm ? "Close" : "Add"} onClick={onAddClick} />
+        <Button text={showForm ? "Fechar" : "Add"} onClick={onAddClick} />
       )}
     </header>
   );
