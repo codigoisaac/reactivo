@@ -60,7 +60,7 @@ function App() {
                   onToggle={togglePriority}
                 />
               ) : (
-                "Use o botão acima para criar atrefas."
+                "Use o botão acima para criar tarefas."
               )}
             </>
           )}
